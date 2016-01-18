@@ -44,3 +44,8 @@ input[type=text] {
 	width: 1.2rem;
 	height: 1.2rem;
 }
+
+button{
+  margin:auto;
+  display:block;
+}
