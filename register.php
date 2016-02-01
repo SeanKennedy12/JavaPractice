@@ -7,11 +7,16 @@
 
 	<head>
 		<title>Register</title>
+		<link rel="stylesheet" type="text/css" href="Register.css">
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    	<meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
 	</head>
 	
 	<body>
+		<header>Register</header>
 		<?php
-		
 			if ($_POST['registerbtn']) {
 				$getUser = $_POST['user'];
 				$getEmail = $_POST['email'];
@@ -38,33 +43,18 @@
 											
 												$password = md5(md5("kjhdksahd".$getPass."Fks56sad"));
 												$date = date("F d, Y");
-												$code = md5(rand());
+												$id = uniqid();
 												
+												//SET BACK TO 0 WHEN ACTIVATION IS WORKING!!!!
 												mysql_query("INSERT INTO users VALUES(
-													'', '$getUser', '$password', '$getEmail', '0', '$code', '$date'
+													'$id', '$getUser', '$password', '$getEmail', '$date'
 												)");
 												
 												$query = mysql_query("SELECT * FROM users WHERE username='$getUser'");
 												$numRows = mysql_num_rows($query);
 												if ($numRows == 1) {
-												
-													$site = "http://localhost/JavaPractice";
-													$webmaster = "Java Practice <seank462@gmail.com>";
-													$headers = "From: $webmaster";
-													$subject = "Activate Your Account";
-													$message = "Thank you for  registering. Click the link below to activate your account. \n";
-													$message .= "$site/activate.php?user=$getUser&code=$code\n";
-													$message .= "You must activate your account to log in.";
-													
-													if ( mail($getEmail, $subject, $message, $headers) ) {
-														$errormsg = "You have been registered. You must activate your account using the code sent to <b>$getEmail</b>";
-														$getUser = "";
-														$getEmail = "";
-													}
-													else {
-														$errormsg = "An error has occured. Your activation email was not sent.";
-													}
-												
+													echo '<script type="text/javascript">', 'alert("Registration has been succesful!");', '</script>';
+													echo '<script type="text/javascript">', 'location.href = \'./index.php\';', '</script>';
 												}
 												else {
 													$errormsg = "An error has occured. Registration has not been successful.";

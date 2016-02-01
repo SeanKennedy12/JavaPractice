@@ -6,7 +6,7 @@ function markQuestions(questionOrder) {
 	//keeps track of what questions are answered incorrectly
 	var wrongQuestions = [1, 2];
 	
-	var questionAnswers = [6, 2, 01];
+	var questionAnswers = [6, 2, '000111'];
 	
 	var answer1 = document.getElementById("answer1").value;
 	var answer2 = document.getElementById("answer2").value;

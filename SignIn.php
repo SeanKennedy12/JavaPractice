@@ -10,13 +10,18 @@
 
 	<head>
 		<title>Sign In</title>
+		<link rel="stylesheet" type="text/css" href="SignIn.css">
+		<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    	<meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
 	</head>
 
 	<body>
-	
+		<header id="header"><h1>Sign In</h1></header>
 		<?php
 			if ($username && $userid) {
-				echo "You are already logged in as <b>$username</b>. <a href='./member.php'>Click here</a> to go to member page.";
+				echo "You are already logged in as <b>$username</b>. <a href='./index.php'>Click here</a> to go to homepage.";
 			}
 			else {
 				$form = "<form action='./SignIn.php' method='post'>
@@ -60,21 +65,14 @@
 								$dbid = $row['id'];
 								$dbuser = $row['username'];
 								$dbpass = $row['password'];
-								$dbactive = $row['active'];
 
 								if ($password == $dbpass) {
-									if ($dbactive == 1) {
 									
 										//set session info
 										$_SESSION['userid'] = $dbid;
 										$_SESSION['username'] = $dbuser;
-										
-										echo "You are logged in as <b>$dbuser</b>. <a href='./member.php'>Click here</a> to go to member page";
 									
-									}
-									else {
-										echo "You must activate your account to login. $form";
-									}
+										echo "You are logged in as <b>$dbuser</b>. <a href='./index.php'>Click here</a> to go to homepage";
 								}
 								else {
 									echo "You did not enter the correct password. $form";
@@ -101,7 +99,6 @@
 				}
 			}
 		?>
-	
 	</body>
 	
 </html>

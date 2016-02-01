@@ -5,7 +5,12 @@ function JavaPracticeController() {
     this.init = function () {
         javaPracticeModel.init();
         javaPracticeView.init();
-        javaPracticeView.setSignInCallBack(function () {window.location.href = "signIn.html"; });
+        if (document.getElementById("signIn")) {
+        	javaPracticeView.setSignInCallBack(function () {window.location.href = "SignIn.php"; });
+        }
+        else {
+        	javaPracticeView.setSignOutCallBack(function () {window.location.href = "SignOut.php"; });
+        }
         javaPracticeView.setExercisesCallback(function () {window.location.href = "exercises.html"; });
         javaPracticeView.setProgressCallback(function () {window.location.href = "progress.html"; });
         javaPracticeView.setSettingsCallback(function () {window.location.href = "settings.html"; });

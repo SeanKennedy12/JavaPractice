@@ -14,6 +14,7 @@ function JavaPracticeView() {
                     return false;
                     console.out(element);
                 };
+            console.log(element);
             element.addEventListener("mouseup", f, false);
             element.addEventListener("touchend", f, false);
         },
@@ -30,6 +31,10 @@ function JavaPracticeView() {
 
     this.setSignInCallBack = function (callback) {
         addMouseAndTouchUp("signIn", callback);
+    };
+    
+    this.setSignOutCallBack = function (callback) {
+        addMouseAndTouchUp("signOut", callback);
     };
 
     this.setExercisesCallback = function (callback) {
