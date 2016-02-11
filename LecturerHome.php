@@ -5,11 +5,6 @@
 	$userid = $_SESSION['userid'];
 	$username = $_SESSION['username'];
 	$signIn = "Sign In";
-	$userLevel = $_SESSION['level'];
-	
-	if ($userLevel == 1) {
-		echo '<script type="text/javascript">', 'location.href = \'./LecturerHome.php\';', '</script>';
-	}
 ?>
 
 <html>
@@ -35,7 +30,7 @@
 			}
 			?>
 			<p class="mainDivItem" id="exercises"">Exercises<p>
-			<p class="mainDivItem" id="progress">Progress<p>
+			<p class="mainDivItem" id="progress">Class Progress<p>
 			<p class="mainDivItem" id="settings">Settings</p>
 			<p class="mainDivItem" id="about">About</p>
 		</div>
@@ -44,5 +39,4 @@
     	<script src="JavaPracticeController.js"></script>
     	
 	</body>
-
 </html>

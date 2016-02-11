@@ -39,7 +39,7 @@
 											$query = mysql_query("SELECT * FROM users WHERE email='$getEmail'");
 											$numrows = mysql_num_rows($query);
 											
-											if(numrows == 0) {
+											if($numrows == 0) {
 											
 												$password = md5(md5("kjhdksahd".$getPass."Fks56sad"));
 												$date = date("F d, Y");
@@ -47,7 +47,7 @@
 												
 												//SET BACK TO 0 WHEN ACTIVATION IS WORKING!!!!
 												mysql_query("INSERT INTO users VALUES(
-													'$id', '$getUser', '$password', '$getEmail', '$date'
+													'$id', '$getUser', '$password', '$getEmail', '0', '$date'
 												)");
 												
 												$query = mysql_query("SELECT * FROM users WHERE username='$getUser'");

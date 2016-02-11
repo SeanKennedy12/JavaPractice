@@ -1,4 +1,5 @@
 function markQuestions(questionOrder) {
+	src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"
 	this.questionOrder = questionOrder;
 	
 	var noOfQuestions = questionOrder.length;
@@ -33,4 +34,8 @@ function markQuestions(questionOrder) {
 	else {
 		alert("You Scored " + score + "/" + noOfQuestions + ". You answered questions " + wrongQuestions + " incorrectly");
 	}
+	
+	$.get("writeScores.php", function(data){
+  		alert("Data: " + data);
+	});
 }

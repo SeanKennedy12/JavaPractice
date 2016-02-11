@@ -65,12 +65,14 @@
 								$dbid = $row['id'];
 								$dbuser = $row['username'];
 								$dbpass = $row['password'];
+								$dblevel = $row['level'];
 
 								if ($password == $dbpass) {
 									
 										//set session info
 										$_SESSION['userid'] = $dbid;
 										$_SESSION['username'] = $dbuser;
+										$_SESSION['level'] = $dblevel;
 									
 										echo "You are logged in as <b>$dbuser</b>. <a href='./index.php'>Click here</a> to go to homepage";
 								}
