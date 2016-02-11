@@ -16,7 +16,7 @@
 		//var num2 = Math.floor((Math.random() * 4) + 1);
 	</script>
 	<head>
-    	<title>Exercise 2</title>
+    	<title>Exercise 3</title>
     	<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     	<meta name="mobile-web-app-capable" content="yes" />
@@ -25,7 +25,7 @@
 	</head>
 
 	<body>
-		<header id="header"><h1>Exercise 2</h1></header>
+		<header id="header"><h1>Exercise 3</h1></header>
 		<?php
 			//setting initial colours
 			$q1Colour = 'white';
@@ -37,13 +37,13 @@
 				$score = 0;
 			
 				$usrAns1 = $_POST['usrAns1'];
-				$ans1 = 6;
+				$ans1 = "11, 8, 5, 11, 8, 5";
 				
 				$usrAns2 = $_POST['usrAns2'];
-				$ans2 = 555;
+				$ans2 = 244;
 				
 				$usrAns3 = $_POST['usrAns3'];
-				$ans3 = 4;
+				$ans3 = 64;
 				
 				if ($usrAns1 == $ans1) {
 					$q1Colour = 'green';
@@ -72,23 +72,24 @@
 				if ($username && $userid) {
 					require("./connect.php");
 				
-					mysql_query("INSERT INTO marks VALUES('$userid', '$username', 'Nested Loops', '2', '$score')");
+					mysql_query("INSERT INTO marks VALUES('$userid', '$username', 'Nested Loops', '3', '$score')");
 				}
 				
 			}
 		
 		
-			$form = "<form action='./nestedLoopsExercise2.php' method='post'>
+			$form = "<form action='./nestedLoopsExercise3.php' method='post'>
 					<table>
 						<tr>
 							<td>
 								<font size = 5 color = \"$q1Colour\">
 								<pre>
-1. how many times would the word \"cat\" be printed if the following code fragment was run?
+1. What would be the output of the following code fragment?
 
-for (int x = 5; x > 2; x--) {
-	for (int y = 0; y < 2; j++) {
-		System.out.println(\"cat\");
+for (int x = 6; x <= 5; x--) {
+	for (int y = 10; y < 2; j-4) {
+		j++;
+		System.out.print(j + \", \");
 	}
 }
 								</pre>
@@ -103,11 +104,20 @@ for (int x = 5; x > 2; x--) {
 							<td>
 							<font size = 5 color = \"$q2Colour\">
 							<pre>
-2. What would be the output of the following code fragment?
+2. How many times would the number 1 be printed when the following code fragment is executed?
 
-for (int i = 2; i > -1; i--) {
-	for (int j = 5; j > 4; j--) {
-		System.out.print(j);
+int loopNumber = 0;
+
+for (int i = 2; i > -2; i = i - 4) {
+	for (int j = 0; j < 2; j++) {
+		loopNumber++;
+		
+		if (loopNumber >= 4) {
+			break;
+		}
+		else { 
+			System.out.println(i);
+			i = i * 2;
 	}
 }
 							</pre>
@@ -123,13 +133,13 @@ for (int i = 2; i > -1; i--) {
 							<td>
 							<font size = 5 color = \"$q3Colour\">
 							<pre>
-3. How many times would the following code fragment output the word \"dog\" ?
+3. What is the minimum value x must be assigned for the code fragment to print \"Henry\" 5 times?
 
-for (int i = 0; i < 2; i++) {
-	for (int j = 1; j < 3; j++) {
-		for (int k = 0; k < -1; k--) {
-			System.out.print(i);
-		}
+int x = ?
+
+for (int i = 64; i >= 4; i = i / 2) {
+	for (int j = 5; j > 0; j = (j % 2) - 1) {
+		System.out.println(\"Henry\");
 	}
 }
 							</pre>

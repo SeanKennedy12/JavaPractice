@@ -22,7 +22,6 @@
     	<meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <link rel="stylesheet" type="text/css" href="Exercises.css">
-        <script src="NestedIfQuestions1.js"></script>
 	</head>
 
 	<body>
@@ -73,7 +72,7 @@
 				if ($username && $userid) {
 					require("./connect.php");
 				
-					mysql_query("INSERT INTO marks VALUES('$userid', '$username', 'Nested Loops', '2', '$score')");
+					mysql_query("INSERT INTO marks VALUES('$userid', '$username', 'Nested Loops', '1', '$score')");
 				}
 				
 			}
@@ -85,10 +84,10 @@
 							<td>
 								<font size = 5 color = \"$q1Colour\">
 								<pre>
-1. how many times would the following code fragment output the word \"Hello\" ?
+1. How many times would the following code fragment output the word \"Hello\" ?
 
 for (int i = 0; i < 5; i++) {
-	for(int j = 0; j < 4; j++) {
+	for (int j = 0; j < 4; j++) {
 		System.out.println(\"Hello\");
 	}
 }
@@ -109,7 +108,7 @@ for (int i = 0; i < 5; i++) {
 x = ?
 
 for (int i = 0; i < x; i++) {
-	for(int j = 0; j < 4; j++) {
+	for (int j = 0; j < 4; j++) {
 		System.out.println(\"hello\");
 	}
 }
@@ -129,7 +128,7 @@ for (int i = 0; i < x; i++) {
 3. What would be the output of the following code fragment?
 
 for (int i = 0; i < 1; i++) {
-	for(int j = 0; j < 3; j++) {
+	for (int j = 0; j < 3; j++) {
 		System.out.print(i);
 	}
 }
@@ -141,11 +140,11 @@ for (int i = 0; i < 1; i++) {
 						<tr>
 							<td><input type='text' name='usrAns3' value='$usrAns3'</td>
 						</tr>
-						<tr>
-							<td></td>
-							<td><input type='submit' name='completeExercise' value='complete'</td>
-						</tr>
-						
+						<div class=\"wrapper\">
+							<tr>
+								<td><input type='submit' class=\"submit\" name='completeExercise' value='complete'</td>
+							</tr>
+						</div>
 					</table>
 				</form>";
 			

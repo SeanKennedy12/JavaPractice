@@ -10,6 +10,8 @@ function ExercisesController() {
         }
         else if (document.title ==  "Nested Loops") {
         	exercisesView.setNestedLoopsExercise1CallBack(function () {window.location.href = "nestedLoopsExercise1.php"; });
+        	exercisesView.setNestedLoopsExercise2CallBack(function () {window.location.href = "nestedLoopsExercise2.php"; });
+        	exercisesView.setNestedLoopsExercise3CallBack(function () {window.location.href = "nestedLoopsExercise3.php"; });
         }
     };
     

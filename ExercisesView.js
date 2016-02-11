@@ -35,6 +35,14 @@ function ExercisesView() {
     this.setNestedLoopsExercise1CallBack = function (callback) {
         addMouseAndTouchUp("nestedLoopsExercise1", callback);
     };
+    
+     this.setNestedLoopsExercise2CallBack = function (callback) {
+        addMouseAndTouchUp("nestedLoopsExercise2", callback);
+    };
+    
+    this.setNestedLoopsExercise3CallBack = function (callback) {
+        addMouseAndTouchUp("nestedLoopsExercise3", callback);
+    };
 
     this.init = function () {
         //addMouseAndTouchUp("about", showAbout);
