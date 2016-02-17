@@ -45,12 +45,16 @@ function JavaPracticeView() {
         addMouseAndTouchUp("progress", callback);
     };
 
-    this.setSettingsCallback = function (callback) {
-        addMouseAndTouchUp("settings", callback);
-    };
-
     this.setAboutCallback = function (callback) {
         addMouseAndTouchUp("about", callback);
+    };
+    
+    this.setAdminCallback = function (callback) {
+        addMouseAndTouchUp("admin", callback);
+    };
+    
+     this.setClassProgressCallback = function (callback) {
+        addMouseAndTouchUp("classProgress", callback);
     };
 
     this.init = function () {

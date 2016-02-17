@@ -32,6 +32,38 @@ function ExercisesView() {
         addMouseAndTouchUp("nestedLoops", callback);
     };
     
+    this.setRecursionCallBack = function (callback) {
+        addMouseAndTouchUp("recursion", callback);
+    };
+    
+    this.setArraysCallBack = function (callback) {
+        addMouseAndTouchUp("arrays", callback);
+    };
+    
+    this.setNestedLoopsProgressCallBack = function (callback) {
+        addMouseAndTouchUp("nestedLoopsProgress", callback);
+    };
+    
+    this.setRecursionProgressCallBack = function (callback) {
+        addMouseAndTouchUp("recursionProgress", callback);
+    };
+    
+    this.setArraysProgressCallBack = function (callback) {
+        addMouseAndTouchUp("arraysProgress", callback);
+    };
+    
+    this.setNestedLoopsStudentProgressCallBack = function (callback) {
+        addMouseAndTouchUp("nestedLoopsStudentProgress", callback);
+    };
+    
+    this.setRecursionStudentProgressCallBack = function (callback) {
+        addMouseAndTouchUp("recursionStudentProgress", callback);
+    };
+    
+    this.setArraysStudentProgressCallBack = function (callback) {
+        addMouseAndTouchUp("arraysStudentProgress", callback);
+    };
+    
     this.setNestedLoopsExercise1CallBack = function (callback) {
         addMouseAndTouchUp("nestedLoopsExercise1", callback);
     };
@@ -42,6 +74,14 @@ function ExercisesView() {
     
     this.setNestedLoopsExercise3CallBack = function (callback) {
         addMouseAndTouchUp("nestedLoopsExercise3", callback);
+    };
+    
+    this.setRecursionExercise1CallBack = function (callback) {
+        addMouseAndTouchUp("recursionExercise1", callback);
+    };
+    
+    this.setArraysExercise1CallBack = function (callback) {
+        addMouseAndTouchUp("arraysExercise1", callback);
     };
 
     this.init = function () {

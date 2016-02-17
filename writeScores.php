@@ -1,3 +1,3 @@
 <?php
-	echo ("<script>console.log(\"555\")</script>");
+	echo ("<script>console.log(\"555\")");
 ?>

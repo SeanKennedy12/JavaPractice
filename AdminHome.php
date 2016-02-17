@@ -30,7 +30,8 @@
 			}
 			?>
 			<p class="mainDivItem" id="exercises"">Exercises<p>
-			<p class="mainDivItem" id="classProgress">Class Progress<p>
+			<p class="mainDivItem" id="progress">Class Progress<p>
+			<p class="mainDivItem" id="admin">Admin</p>
 			<p class="mainDivItem" id="about">About</p>
 		</div>
 		<script src="JavaPracticeModel.js"></script>

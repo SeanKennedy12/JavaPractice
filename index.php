@@ -10,6 +10,9 @@
 	if ($userLevel == 1) {
 		echo '<script type="text/javascript">', 'location.href = \'./LecturerHome.php\';', '</script>';
 	}
+	else if ($userLevel == 2) {
+		echo '<script type="text/javascript">', 'location.href = \'./AdminHome.php\';', '</script>';
+	}
 ?>
 
 <html>
@@ -36,7 +39,6 @@
 			?>
 			<p class="mainDivItem" id="exercises"">Exercises<p>
 			<p class="mainDivItem" id="progress">Progress<p>
-			<p class="mainDivItem" id="settings">Settings</p>
 			<p class="mainDivItem" id="about">About</p>
 		</div>
 		<script src="JavaPracticeModel.js"></script>
